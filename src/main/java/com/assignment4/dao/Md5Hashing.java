@@ -39,24 +39,25 @@ public class Md5Hashing {
         }
     }
 
+    // for integer encryption
     public String getMd5Int(int input)
     {
         try {
         	
-        	// Convert the integer input to a string
+        	// convert the integer input to a string
             String inputStr = Integer.toString(input);
         	
-            // Static getInstance method is called with hashing MD5
+            // static getInstance method is called with hashing MD5
             MessageDigest md = MessageDigest.getInstance("MD5");
  
             // digest() method is called to calculate message digest
             // of an input digest() return array of byte
             byte[] messageDigest = md.digest(inputStr.getBytes());
  
-            // Convert byte array into signum representation
+            // convert byte array into signum representation
             BigInteger no = new BigInteger(1, messageDigest);
  
-            // Convert message digest into hex value
+            // convert message digest into hex value
             String hashtext = no.toString(16);
             
             while (hashtext.length() < 32) {
@@ -75,7 +76,7 @@ public class Md5Hashing {
     }
     
     
-    //
+    // compares hash values
     public void decrypt(String hashedPayroll) {
     	
     	int testPayroll = 1234;

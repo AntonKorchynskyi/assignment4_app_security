@@ -2,22 +2,22 @@ package com.assignment4.model;
 
 public class Employee {
     private String company;
-    private int payroll;             // Original numeric value
-    private String hashedPayroll;    // Hashed version (MD5/SHA)
+    private int payroll;             // original numeric value
+    private String hashedPayroll;    // hashed version (MD5)
     private String fullName;
     private String reference;
     private String jobTitle;
     private String workFunction;
     private String workSubFunction;
     private String sector;
-    private String location;
+    private String location;  // original value
     private String hashedLocation;   // hashed
     private String building;
     private String room;
-    private int requesterTel;        
-    private String hashedRequesterTel; 
+    private int requesterTel;        // original value
+    private String hashedRequesterTel; // hashed value
 
-    // Constructor (include both original and hashed values)
+    // Constructor (includes both original and hashed values)
     public Employee(String company, int payroll, String hashedPayroll, String fullName, String reference, 
                     String jobTitle, String workFunction, String workSubFunction, String sector, 
                     String location, String hashedLocation, String building, String room, 
@@ -39,7 +39,7 @@ public class Employee {
         this.hashedRequesterTel = hashedRequesterTel;
     }
 
-    // Getters and Setters
+    // getters and Setters
     public String getCompany() {
         return company;
     }
